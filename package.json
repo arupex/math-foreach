@@ -1,0 +1,36 @@
+{
+  "name": "math-foreach",
+  "version": "0.0.1",
+  "description": "Simple Array Math Library",
+  "main": "mathforeach.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arupex/math-foreach.git"
+  },
+  "keywords": [
+    "math",
+    "array",
+    "arrays",
+    "for",
+    "each",
+    "data",
+    "point",
+    "points",
+    "dataset",
+    "time",
+    "series"
+  ],
+  "author": "dirwin517",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/arupex/math-foreach/issues"
+  },
+  "homepage": "https://github.com/arupex/math-foreach#readme",
+  "dependencies": {
+    "deep-setter": "^1.0.1",
+    "deep-value": "^1.0.3"
+  }
+}
