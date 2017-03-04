@@ -44,7 +44,6 @@ Simple Array Math Library
      math.avg(dataStyle2));         // determines average
      math.min(dataStyle2));         // determines min
      math.max(dataStyle2));         // determines max
-     
      math.values(dataStyle1, 'value') // returns dataStyle2
      
  **Object Array Style Calls**
@@ -57,8 +56,10 @@ Simple Array Math Library
     math.avg(dataStyle2, 'value');         // determines average
     math.min(dataStyle2, 'value');         // determines min
     math.max(dataStyle2, 'value');         // determines max
+ 
     
  #API
+ 
      positiveShift(array, optionalAccessor)
      normalize(array, optionalAccessor)
      multiply(array, optionalAccessor)

@@ -1,6 +1,6 @@
 {
   "name": "math-foreach",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple Array Math Library",
   "main": "mathforeach.js",
   "scripts": {
