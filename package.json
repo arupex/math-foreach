@@ -1,6 +1,6 @@
 {
   "name": "math-foreach",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple Array Math Library",
   "main": "mathforeach.js",
   "scripts": {
@@ -21,7 +21,15 @@
     "points",
     "dataset",
     "time",
-    "series"
+    "series",
+    "avg",
+    "average",
+    "max",
+    "min",
+    "diff",
+    "derivative",
+    "normalize",
+    "chain"
   ],
   "author": "dirwin517",
   "license": "UNLICENSED",

@@ -7,6 +7,86 @@ let deepSet = require('deep-setter');
 
 class MathForEach {
 
+    constructor(array, accessor){
+        this.array = array;
+        this.accessor = accessor;
+    }
+
+    toValue(){
+        return this.array;
+    }
+
+    chainDerivative(nth, accessor){
+        this.array = MathForEach.derivativeNth(this.array, nth, accessor || this.accessor);
+        return this;
+    }
+
+    chainNormalize(accessor, shiftMin){
+        this.array = MathForEach.normalize(this.array, accessor || this.accessor, shiftMin);
+        return this;
+    }
+
+    chainPositiveShift(accessor){
+        this.array = MathForEach.positiveShift(this.array, accessor || this.accessor);
+        return this;
+    }
+
+    chainDiff(array2, accessor){
+        this.array = MathForEach.diff(this.array, array2, accessor || this.accessor);
+        return this;
+    }
+
+    chainOnlyAbove(targetValue, accessor, dontInclude){
+        this.array = MathForEach.onlyAbove(this.array, targetValue, accessor || this.accessor, dontInclude);
+        return this;
+    }
+
+    chainOnlyBelow(targetValue, accessor, dontInclude){
+        this.array = MathForEach.onlyBelow(this.array, targetValue, accessor || this.accessor, dontInclude);
+        return this;
+    }
+
+    chainOnlyEqual(targetValue, accessor, dontInclude){
+        this.array = MathForEach.onlyEqual(this.array, targetValue, accessor || this.accessor, dontInclude);
+        return this;
+    }
+
+    chainAdd(targetValue, accessor){
+        this.array = MathForEach.add(this.array, targetValue, accessor || this.accessor);
+        return this;
+    }
+
+    chainMultiply(targetValue, accessor){
+        this.array = MathForEach.multiply(this.array, targetValue, accessor || this.accessor);
+        return this;
+    }
+
+    chainAvg(accessor){
+        this.array = MathForEach.onlyAbove(this.array, accessor || this.accessor);
+        return this;
+    }
+
+    chainMin(accessor){
+        this.array = MathForEach.min(this.array, accessor || this.accessor);
+        return this;
+    }
+
+    chainMax(accessor){
+        this.array = MathForEach.max(this.array, accessor || this.accessor);
+        return this;
+    }
+
+    chainMedian(accessor){
+        this.array = MathForEach.median(this.array, accessor || this.accessor);
+        return this;
+    }
+
+    chainMode(accessor){
+        this.array = MathForEach.mode(this.array, accessor || this.accessor);
+        return this;
+    }
+
+
     static dGet(obj, accessor){
         if(accessor){
             return deepGet(obj, accessor);

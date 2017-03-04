@@ -48,6 +48,12 @@ describe('Derivatives', () => {
         console.log('mode', math.mode([-5, 2, 3, 4, 5, 2, 7], null, true));
 
 
+        console.log('test', new math([-5, 2, 3, 4, 5, 2, 7])
+            .chainDerivative(1)
+            .chainNormalize()
+            .chainMin()
+            .toValue());
+
     });
 
 

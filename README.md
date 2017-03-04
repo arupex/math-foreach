@@ -8,7 +8,8 @@ Simple Array Math Library
 ![lifetimeDownloadCount](https://img.shields.io/npm/dt/math-foreach.svg?maxAge=2592000)
 <a href='https://pledgie.com/campaigns/31873'><img alt='Pledge To Arupex!' src='https://pledgie.com/campaigns/31873.png?skin_name=chrome' border='0' ></a>
 
-
+    Methods are all static, except chain methods, which can be accessed using constructor of constructor(array, optionalAccessor)
+    
     
 #Install
 
@@ -17,6 +18,7 @@ Simple Array Math Library
 #Usage
 
     var MFE = require('math-foreach');
+    chainObj = new MFE(array, optionalAccessorStr);
     
 **Data Styles**
 
@@ -57,6 +59,15 @@ Simple Array Math Library
     math.min(dataStyle2, 'value');         // determines min
     math.max(dataStyle2, 'value');         // determines max
  
+  **Chain Calls**
+  
+      let obj = new MathForEach(myArray, optionalAccessor);
+      
+      obj
+        .chainDerivative(1)
+        .chainNormalize()
+        .chainMedian()
+        .toValue();
     
  #API
  
@@ -75,3 +86,20 @@ Simple Array Math Library
      onlyEqual(array, optionalAccessor)
      onlyBelow(array, optionalAccessor)
      onlyBelow(array, optionalAccessor)
+     
+ **Chains**
+            
+        chainDerivative(nth, optionalAccessor)
+        chainNormalize(optionalAccessor, shiftMin)
+        chainPositiveShift(optionalAccessor)
+        chainDiff(array2, optionalAccessor)
+        chainOnlyAbove(targetValue, optionalAccessor, dontInclude)
+        chainOnlyBelow(targetValue, optionalAccessor, dontInclude)
+        chainOnlyEqual(targetValue, optionalAccessor, dontInclude)
+        chainAdd(targetValue, optionalAccessor)
+        chainMultiply(targetValue, optionalAccessor)
+        chainAvg(optionalAccessor)
+        chainMin(optionalAccessor)
+        chainMax(optionalAccessor)
+        chainMedian(optionalAccessor)
+        chainMode(optionalAccessor)
