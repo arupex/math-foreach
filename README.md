@@ -21,17 +21,28 @@ A word of **Caution**, at Arupex we take **AGILE** seriously, while we try our b
 
 ##Usage
 
-    var MFE = require('math-foreach');
-    chainObj = new MFE(array, optionalAccessorStr);
+    let ArrayMath = require('math-foreach').ArrayMath;
+    chainObj = new ArrayMath(array, optionalAccessorStr);
+    
+    let normalizedMaxOf1stDerivative = chainObj
+                                        .derivative1d(1)
+                                        .normalize()
+                                        .max();
+
 
 ---
     
 ##Docs
-   ( highly recommend reading unit tests in test folder )
+
+   ( highly recommend reading unit tests in test folder ) 
+    - [Chain Tests](./test/chain.js)
+    - [Opperation Tests](./test/opperations.js)
+    - [Timeseries Tests](./test/timeseries.js)
 
 ---
 
 ####Ready
+
  - [ArrayMath Class](./docs/ArrayMath.md)
  - [Mappers](./docs/Mappers.md)
  - [Opperations](./docs/Opperations.md)
@@ -40,18 +51,20 @@ A word of **Caution**, at Arupex we take **AGILE** seriously, while we try our b
 ---
  
 ####In Progress ( Use with Some Caution **Equivalent to Nightly** )
+
  - [TimeOpperations](./docs/TimeOpperators.md)
  - [Timeseries](./docs/Timeseries.md)
 
 ---
 
 ####TBC (to be coded, future release)
+
  - [Formula]()
  - [StreamMath]()
  - [Parallel]()
    
     
-**Data Styles** both work thanks to ( deep-setter deep-value modules )
+**Data Styles** both work thanks to ( [deep-setter](https://www.npmjs.com/package/deep-setter) [deep-value](https://www.npmjs.com/package/deep-value) modules )
 
     var dataStyle1 = [{"value": 0},{"value": 1},{"value": 2}]
                      
