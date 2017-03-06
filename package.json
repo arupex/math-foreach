@@ -1,6 +1,6 @@
 {
   "name": "math-foreach",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "Simple Array Math Library",
   "main": "mathforeach.js",
   "scripts": {
@@ -29,7 +29,12 @@
     "diff",
     "derivative",
     "normalize",
-    "chain"
+    "chain",
+    "timeseries",
+    "abs",
+    "foreach",
+    "filter",
+    "fill"
   ],
   "author": "dirwin517",
   "license": "UNLICENSED",
